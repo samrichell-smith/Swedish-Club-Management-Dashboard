@@ -1,5 +1,3 @@
-
-
 import { Routes, Route } from "react-router-dom"
 import './index.css'
 import Dashboard from './pages/Dashboard'
