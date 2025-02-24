@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+
+type Task = {
+  id: string;
+  title: string;
+  description: string;
+  tags: string[];
+  dueDate: string;
+}
 
 const Dashboard = () => {
 
-  type Task = {
-    id: string;
-    title: string;
-    description: string;
-    tags: string[];
-    dueDate: string;
-  }
+  const [tasks, setTasks] = useState<Task[]>([])
+  const [totalTasks, setTotalTasks] = useState(0)
+
+
+
+
 
   async function fetchAllTasks() {
     try {
@@ -22,9 +30,10 @@ const Dashboard = () => {
       })
       )
 
-      setTasks
-
-
+      setTasks(tasksWithConvertedValues)
+      calculateTaskStats(tasksWithConvertedValues)
+    } catch (error) {
+      console.error("Error fetching tasks:", error)
     }
   }
 
