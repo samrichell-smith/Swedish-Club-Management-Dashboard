@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Task } from '../typeDefs';
 
 const TaskCard = ({ task, onDelete }: { task: Task; onDelete: (id: string) => void }) => {
