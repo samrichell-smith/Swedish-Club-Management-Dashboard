@@ -56,7 +56,26 @@ const Dashboard = () => {
 
 
   return (
-    <div>Dashboard</div>
+    <div className="p-4">
+    <h1 className="text-2xl font-bold">Dashboard</h1>
+    <div className="my-4">
+      <h2>Total Tasks: {totalTasks}</h2>
+      <h2>Upcoming Tasks: {upcomingTasks.length}</h2>
+      <h2>Overdue Tasks: {overdueTasksCount}</h2>
+    </div>
+    <div className="my-4">
+      <h3>Upcoming Tasks</h3>
+      <ul>
+        {upcomingTasks.map(task => (
+          <li key={task.id} className="border p-2 my-2">
+            <h4 className="font-semibold">{task.title}</h4>
+            <p className="text-sm text-gray-500">Due: {task.dueDate.toLocaleString()}</p> {/* Format date for display */}
+          </li>
+        ))}
+      </ul>
+    </div>
+    {/* Add quick actions here */}
+  </div>
   )
 }
 
