@@ -1,12 +1,8 @@
 
 import { Task } from '../typeDefs';
+import { capitaliseWords } from '../utils';
 
-const capitaliseWords = (str: string) => {
-    return str
-      .split(' ')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
-  };
+
 
 
 const TaskCard = ({ task, onDelete }: { task: Task; onDelete: (id: string) => void }) => {
