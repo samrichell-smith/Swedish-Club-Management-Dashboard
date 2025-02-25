@@ -66,7 +66,7 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="p-4 bg-gray-200">
+    <div className="p-4 bg-gray-200 h-screen">
       <div className="flex flex-row gap-x-4">
         <div className="flex flex-col items-center mb-4 w-1/2 bg-white p-4 rounded-lg shadow ">
           <div className="w-full h-1/2 flex items-center">
@@ -74,9 +74,12 @@ const Dashboard = () => {
               University of Auckland Swedish Club Dashboard
             </h1>
           </div>
-          <div className="items-start w-full h-1/2 flex p-2">
+          <div className="items-start w-full h-1/2 flex p-2 gap-x-4">
             <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
               View All Tasks
+            </button>
+            <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+              Add New Task
             </button>
           </div>
         </div>
@@ -101,10 +104,10 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-0">
         <section className="bg-white p-4 rounded-lg shadow">
-          <h3 className="text-xl font-semibold">Upcoming Tasks</h3>
-          <ul>
+          <h3 className="text-3xl font-semibold mb-4">Upcoming Tasks</h3>
+          <ul className="flex flex-col gap-y-4">
             {upcomingTasks.map((task) => (
               <TaskCard key={task.id} task={task} onDelete={handleDelete} />
             ))}
@@ -112,8 +115,8 @@ const Dashboard = () => {
         </section>
 
         <section className="bg-white p-4 rounded-lg shadow">
-          <h3 className="text-xl font-semibold">Overdue Tasks</h3>
-          <ul>
+          <h3 className="text-3xl font-semibold mb-4">Overdue Tasks</h3>
+          <ul className="flex flex-col gap-y-4">
             {overdueTasks.map((task) => (
               <TaskCard key={task.id} task={task} onDelete={handleDelete} />
             ))}
@@ -121,13 +124,9 @@ const Dashboard = () => {
         </section>
       </div>
 
-      <div>
-        <button className="mt-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
-          Add New Task
-        </button>
-      </div>
+      
 
-      {/* Add your popup modal for adding tasks here */}
+     
     </div>
   );
 };
