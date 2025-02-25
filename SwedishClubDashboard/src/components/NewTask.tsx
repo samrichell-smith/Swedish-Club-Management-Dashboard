@@ -15,6 +15,14 @@ const NewTask: React.FC<NewTaskProps> = ({isOpen, onClose }) => {
     const [tags, setTags] = useState<string[]>([])
     const [due, setDue] = useState("")
 
+    const handleTagInput = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Enter" && e.currentTarget.value.trim()) {
+            e.preventDefault()
+            setTags([...tags, e.currentTarget.value.trim()])
+            e.currentTarget.value = ""
+        }
+    }
+
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-md z-50">
           
