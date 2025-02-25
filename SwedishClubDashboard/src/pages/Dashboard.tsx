@@ -67,9 +67,6 @@ const Dashboard = () => {
 
   return (
     <div className="p-4 bg-gray-200">
-      
-
-
       <div className="flex flex-row gap-x-4">
         <div className="flex flex-col items-center mb-4 w-1/2 bg-white p-4 rounded-lg shadow ">
           <div className="w-full h-1/2 flex items-center">
@@ -82,52 +79,55 @@ const Dashboard = () => {
               View All Tasks
             </button>
           </div>
-            
-            
         </div>
 
-        <div className="gap-4 mb-4 w-1/2 h-full">
-          <div className="bg-white p-4 rounded-lg shadow w-full ">
-            <h2 className="text-xl font-semibold">Stats</h2>
-            <div className="my-2">
-              <h3>Total Tasks: {totalTasks}</h3>
-              <h3>Upcoming Tasks: {upcomingTasks.length}</h3>
-              <h3>Overdue Tasks: {overdueTasks.length}</h3>
+        <div className="gap-4 mb-4 w-1/2 h-full flex flex-col">
+          <div className="bg-white p-6 rounded-lg shadow-md w-full">
+            <h2 className="text-3xl font-semibold mb-4  pb-2 text-center">Stats</h2>
+            <div className="flex flex-row space-x-40 justify-center">
+              <h3 className="text-lg">
+                Total Tasks: <span className="font-bold">{totalTasks}</span>
+              </h3>
+              <h3 className="text-lg">
+                Upcoming Tasks:{" "}
+                <span className="font-bold">{upcomingTasks.length}</span>
+              </h3>
+              <h3 className="text-lg">
+                Overdue Tasks:{" "}
+                <span className="font-bold">{overdueTasks.length}</span>
+              </h3>
             </div>
           </div>
         </div>
-        
-        </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-          <section className="bg-white p-4 rounded-lg shadow">
-            <h3 className="text-xl font-semibold">Upcoming Tasks</h3>
-            <ul>
-              {upcomingTasks.map((task) => (
-                <TaskCard key={task.id} task={task} onDelete={handleDelete} />
-              ))}
-            </ul>
-          </section>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <section className="bg-white p-4 rounded-lg shadow">
+          <h3 className="text-xl font-semibold">Upcoming Tasks</h3>
+          <ul>
+            {upcomingTasks.map((task) => (
+              <TaskCard key={task.id} task={task} onDelete={handleDelete} />
+            ))}
+          </ul>
+        </section>
 
-          <section className="bg-white p-4 rounded-lg shadow">
-            <h3 className="text-xl font-semibold">Overdue Tasks</h3>
-            <ul>
-              {overdueTasks.map((task) => (
-                <TaskCard key={task.id} task={task} onDelete={handleDelete} />
-              ))}
-            </ul>
-          </section>
-        </div>
-        
-        <div>
-          <button className="mt-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
-            Add New Task
-          </button>
-        </div>
-        
+        <section className="bg-white p-4 rounded-lg shadow">
+          <h3 className="text-xl font-semibold">Overdue Tasks</h3>
+          <ul>
+            {overdueTasks.map((task) => (
+              <TaskCard key={task.id} task={task} onDelete={handleDelete} />
+            ))}
+          </ul>
+        </section>
+      </div>
 
-        {/* Add your popup modal for adding tasks here */}
-      
+      <div>
+        <button className="mt-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
+          Add New Task
+        </button>
+      </div>
+
+      {/* Add your popup modal for adding tasks here */}
     </div>
   );
 };
