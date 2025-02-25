@@ -14,7 +14,8 @@ const TaskCard = ({ task, onDelete }: { task: Task; onDelete: (id: string) => vo
         ))}
       </div>
       <button 
-        className="w-1/8 py-2 bg-[#005cbf] text-white rounded hover:bg-[#004a9f] transition-colors cursor-pointer"
+        className="w-1/8 py-2 bg-[#005cbf] text-white rounded hover:bg-[#004a9f] cursor-pointer hover:scale-104 duration-300 transition-all
+            ease-in-out shadow-md "
         onClick={() => onDelete(task.id)}
       >
         Done

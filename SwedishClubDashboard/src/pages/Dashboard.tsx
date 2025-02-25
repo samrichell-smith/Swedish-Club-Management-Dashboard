@@ -70,15 +70,17 @@ const Dashboard = () => {
       <div className="flex flex-row gap-x-4">
         <div className="flex flex-col items-center mb-4 w-1/2 bg-white p-4 rounded-lg shadow ">
           <div className="w-full h-1/2 flex items-center">
-            <h1 className="text-4xl font-bold">
+            <h1 className="text-4xl font-semibold text-gray-800">
               University of Auckland Swedish Club Dashboard
             </h1>
           </div>
           <div className="items-start w-full h-1/2 flex p-2 gap-x-4">
-            <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+            <button className="px-4 py-2 bg-[#005cbf] text-white rounded hover:bg-[#004a9f] cursor-pointer hover:scale-104 duration-300 transition-all
+            ease-in-out shadow-md">
               View All Tasks
             </button>
-            <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+            <button className="px-4 py-2 bg-[#005cbf] text-white rounded hover:bg-[#004a9f] cursor-pointer hover:scale-104 duration-300 transition-all
+            ease-in-out shadow-md">
               Add New Task
             </button>
           </div>
@@ -86,16 +88,16 @@ const Dashboard = () => {
 
         <div className="gap-4 mb-4 w-1/2 h-full flex flex-col">
           <div className="bg-white p-6 rounded-lg shadow-md w-full">
-            <h2 className="text-3xl font-semibold mb-4  pb-2 text-center">Stats</h2>
-            <div className="flex flex-row space-x-40 justify-center">
-              <h3 className="text-lg">
+            <h2 className="text-3xl font-semibold mb-4  pb-2 text-center text-gray-800">Stats</h2>
+            <div className="flex flex-row space-x-40 justify-center ">
+              <h3 className="text-lg bg-[#ffc720] p-2 rounded-lg text-gray-800">
                 Total Tasks: <span className="font-bold">{totalTasks}</span>
               </h3>
-              <h3 className="text-lg">
+              <h3 className="text-lg bg-[#ffc720] p-2 rounded-lg text-gray-800">
                 Upcoming Tasks:{" "}
                 <span className="font-bold">{upcomingTasks.length}</span>
               </h3>
-              <h3 className="text-lg">
+              <h3 className="text-lg bg-[#ffc720] p-2 rounded-lg text-gray-800">
                 Overdue Tasks:{" "}
                 <span className="font-bold">{overdueTasks.length}</span>
               </h3>
