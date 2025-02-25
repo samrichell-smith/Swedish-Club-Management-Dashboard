@@ -1,5 +1,6 @@
 import  { useEffect, useState } from "react";
 import { Task } from "../typeDefs";
+import TaskCard from "../components/TaskCard";
 
 
 const Dashboard = () => {
@@ -33,13 +34,28 @@ const Dashboard = () => {
     }
   }
 
+  async function handleDelete(taskId: string) {
+    try {
+      await fetch(`https://swedish-club-management-api.onrender.com/task/${taskId}`, 
+        {
+          method: 'DELETE'
+        }
+      )
+
+      setTasks((prevTasks) => prevTasks.filter(task => task.id !== taskId))
+      calculateTaskStats(tasks)
+
+    } catch (error) {
+      console.error("Error deleting task:", error)
+    }
+  }
+
   function calculateTaskStats(taskList: Task[]) {
 
     const now = new Date();
     const nowUTC = new Date(now.toISOString())
 
-    console.log("Current UTC Time:", nowUTC);
-    console.log("Task Due Dates:", taskList.map(task => task.due));
+    
 
     setTotalTasks(taskList.length);
 
@@ -68,13 +84,7 @@ const Dashboard = () => {
         <h3>Upcoming Tasks</h3>
         <ul>
           {upcomingTasks.map((task) => (
-            <li key={task.id} className="border p-2 my-2">
-              <h4 className="font-semibold">{task.title}</h4>
-              <p className="text-sm text-gray-500">
-                Due: {task.due.toLocaleString()}
-              </p>{" "}
-              
-            </li>
+            <TaskCard task={task} onDelete={() => handleDelete(task.id)} />
           ))}
         </ul>
       </div>
@@ -83,18 +93,13 @@ const Dashboard = () => {
         <h3>Overdue Tasks</h3>
         <ul>
           {overdueTasks.map((task) => (
-            <li key={task.id} className="border p-2 my-2">
-              <h4 className="font-semibold">{task.title}</h4>
-              <p className="text-sm text-gray-500">
-                Due: {task.due.toLocaleString()}
-              </p>{" "}
-              
-            </li>
+            <TaskCard task={task} onDelete={() => handleDelete(task.id)} />
           ))}
         </ul>
       </div>
       {/* Add quick actions here */}
     </div>
+    
   );
 };
 
