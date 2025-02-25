@@ -6,9 +6,10 @@ import { useState } from "react";
 interface NewTaskProps {
     isOpen: boolean
     onClose: () => void
+    fetchAllTasks: () => void
 }
 
-const NewTask: React.FC<NewTaskProps> = ({isOpen, onClose }) => {
+const NewTask: React.FC<NewTaskProps> = ({isOpen, onClose, fetchAllTasks }) => {
     if (!isOpen) return null
 
     const [text, setText] = useState("")
@@ -46,6 +47,7 @@ const NewTask: React.FC<NewTaskProps> = ({isOpen, onClose }) => {
             }
 
             console.log("New Task Created Successfully:", taskData)
+            fetchAllTasks()
             onClose()
             
         } catch(error) {

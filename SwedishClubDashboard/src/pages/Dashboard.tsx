@@ -13,7 +13,7 @@ const Dashboard = () => {
     fetchAllTasks();
   }, []);
 
-  async function fetchAllTasks() {
+   async function fetchAllTasks() {
     try {
       const response = await fetch(
         "https://swedish-club-management-api.onrender.com/task/"
@@ -132,7 +132,7 @@ const Dashboard = () => {
 
       
 
-      <NewTask isOpen={isNewTaskOpen} onClose={() => setisNewTaskOpen(false)} />
+      <NewTask isOpen={isNewTaskOpen} onClose={() => setisNewTaskOpen(false)} fetchAllTasks={fetchAllTasks} />
     </div>
   );
 };
