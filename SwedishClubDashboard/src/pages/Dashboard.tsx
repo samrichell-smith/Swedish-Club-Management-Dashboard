@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Task } from "../typeDefs";
 import TaskCard from "../components/TaskCard";
+import NewTask from "../components/NewTask";
 
 const Dashboard = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -65,6 +66,8 @@ const Dashboard = () => {
     setOverdueTasks(overdue);
   }
 
+  const [isNewTaskOpen, setisNewTaskOpen] = useState(false)
+
   return (
     <div className="p-4 bg-gray-200 h-screen">
       <div className="flex flex-row gap-x-4">
@@ -80,7 +83,8 @@ const Dashboard = () => {
               View All Tasks
             </button>
             <button className="px-4 py-2 bg-[#005cbf] text-white rounded hover:bg-[#004a9f] cursor-pointer hover:scale-104 duration-300 transition-all
-            ease-in-out shadow-md">
+            ease-in-out shadow-md"
+            onClick={() => setisNewTaskOpen(true)}>
               Add New Task
             </button>
           </div>
@@ -128,7 +132,7 @@ const Dashboard = () => {
 
       
 
-     
+      <NewTask isOpen={isNewTaskOpen} onClose={() => setisNewTaskOpen(false)} />
     </div>
   );
 };
