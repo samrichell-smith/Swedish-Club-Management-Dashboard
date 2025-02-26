@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @import './fonts.css';
 
+html {
+  overflow-y: scroll;
+}
+
+
 /* div {
     outline: 2px solid red; 
   } */

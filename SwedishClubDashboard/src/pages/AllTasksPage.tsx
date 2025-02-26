@@ -49,9 +49,9 @@ const AllTasksPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 p-4">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6">
+      <div className="max-w-1/2 mx-auto bg-white shadow-lg rounded-lg p-6">
         <h2 className="text-4xl font-bold text-gray-800 mb-6 text-center">All Tasks</h2>
-        <div className="mb-6 flex justify-between">
+        <div className="mb-6 flex justify-center gap-x-96">
           <button 
             className="px-4 py-2 bg-[#005cbf] text-white rounded hover:bg-[#004a9f] cursor-pointer hover:scale-104 duration-300 transition-all ease-in-out shadow-md"
             onClick={() => navigate('/dashboard')}
