@@ -81,16 +81,21 @@ const Dashboard = () => {
               University of Auckland Swedish Club Dashboard
             </h1>
           </div>
-          <div className="items-start w-full h-1/2 flex p-2 gap-x-4">
-            <button className="px-4 py-2 bg-[#005cbf] text-white rounded hover:bg-[#004a9f] cursor-pointer hover:scale-104 duration-300 transition-all
-            ease-in-out shadow-md"
-            onClick={() => navigate('/tasks')}>
-              View All Tasks
-            </button>
+
+
+
+          <div className="items-center justify-center w-full h-1/2 flex p-2 gap-x-28">
+            
             <button className="px-4 py-2 bg-[#005cbf] text-white rounded hover:bg-[#004a9f] cursor-pointer hover:scale-104 duration-300 transition-all
             ease-in-out shadow-md"
             onClick={() => setisNewTaskOpen(true)}>
               Add New Task
+            </button>
+
+            <button className="px-4 py-2 bg-[#005cbf] text-white rounded hover:bg-[#004a9f] cursor-pointer hover:scale-104 duration-300 transition-all
+            ease-in-out shadow-md"
+            onClick={() => navigate('/tasks')}>
+              View All Tasks
             </button>
           </div>
         </div>
