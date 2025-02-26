@@ -74,10 +74,10 @@ const Dashboard = () => {
 
   return (
     <div className="p-4 bg-gray-200 h-screen">
-      <div className="flex flex-row gap-x-4">
+      <div className="flex flex-row gap-x-4 ">
         <div className="flex flex-col items-center mb-4 w-1/2 bg-white p-4 rounded-lg shadow ">
-          <div className="w-full h-1/2 flex items-center">
-            <h1 className="text-4xl font-semibold text-gray-800">
+          <div className="w-full h-1/2 flex items-center justify-center">
+            <h1 className="text-4xl font-semibold text-gray-800 0">
               University of Auckland Swedish Club Dashboard
             </h1>
           </div>
