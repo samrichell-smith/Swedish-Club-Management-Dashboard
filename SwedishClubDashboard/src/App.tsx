@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom"
 import './index.css'
 import Dashboard from './pages/Dashboard'
-import Tasks from './pages/TaskPage'
+
+import AllTasksPage from "./pages/AllTasksPage"
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/tasks" element={<Tasks />} />
+          <Route path="/tasks" element={<AllTasksPage />} />
         </Routes>
       </div>
     </> 
