@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Task } from "../typeDefs";
 import TaskCard from "../components/TaskCard";
 import NewTask from "../components/NewTask";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -69,6 +70,8 @@ const Dashboard = () => {
 
   const [isNewTaskOpen, setisNewTaskOpen] = useState(false)
 
+  const navigate = useNavigate()
+
   return (
     <div className="p-4 bg-gray-200 h-screen">
       <div className="flex flex-row gap-x-4">
@@ -80,7 +83,8 @@ const Dashboard = () => {
           </div>
           <div className="items-start w-full h-1/2 flex p-2 gap-x-4">
             <button className="px-4 py-2 bg-[#005cbf] text-white rounded hover:bg-[#004a9f] cursor-pointer hover:scale-104 duration-300 transition-all
-            ease-in-out shadow-md">
+            ease-in-out shadow-md"
+            onClick={() => navigate('/tasks')}>
               View All Tasks
             </button>
             <button className="px-4 py-2 bg-[#005cbf] text-white rounded hover:bg-[#004a9f] cursor-pointer hover:scale-104 duration-300 transition-all
