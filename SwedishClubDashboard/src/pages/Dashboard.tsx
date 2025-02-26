@@ -45,6 +45,7 @@ const Dashboard = () => {
 
       setTasks((prevTasks) => prevTasks.filter((task) => task.id !== taskId));
       calculateTaskStats(tasks);
+      fetchAllTasks()
     } catch (error) {
       console.error("Error deleting task:", error);
     }

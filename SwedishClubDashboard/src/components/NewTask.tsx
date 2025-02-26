@@ -66,7 +66,11 @@ const NewTask: React.FC<NewTaskProps> = ({isOpen, onClose, fetchAllTasks }) => {
             </button>
     
             
-            <h2 className="text-xl font-semibold mb-4">Create a New Task</h2>
+            <div className="text-xl font-semibold mb-4 flex justify-start">
+              <h2 className="bg-[#ffc720] p-2 rounded-lg text-gray-800">
+                Create a New Task
+              </h2>
+            </div>
             <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
               {/* Task Description */}
               <textarea
@@ -103,7 +107,8 @@ const NewTask: React.FC<NewTaskProps> = ({isOpen, onClose, fetchAllTasks }) => {
               />
     
               
-              <button type="submit" className="bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+              <button type="submit" className="bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 cursor-pointer hover:scale-104 duration-300 transition-all
+            ease-in-out shadow-md">
                 Create Task
               </button>
             </form>
