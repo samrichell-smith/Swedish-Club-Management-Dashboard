@@ -9,13 +9,13 @@ The Swedish Club Management Dashboard is a web application tailored for club exe
 ## Features
 
 - **Task Management**: Effortlessly create, view, and delete tasks.  
-  ![Dashboard](path/to/dashboard-screenshot.png)
+  ![Dashboard](src/assets/img/Dashboard.png)
 
 - **Overdue Task Highlighting**: Instantly spot overdue tasks to facilitate timely action.  
-  ![All Tasks Page](path/to/all-tasks-screenshot.png)
+  ![All Tasks Page](src/assets/img/AllTasks.png)
 
 - **Custom API**: A fully custom RESTful API enabling efficient interaction with task data.  
-  ![Task Creation Screen](path/to/task-creation-screenshot.png)
+  ![Task Creation Screen](src/assets/img/TaskCreation.png)
 
 - **User-friendly Interface**: A clean, intuitive layout that reflects Swedish cultural aesthetics.
 
