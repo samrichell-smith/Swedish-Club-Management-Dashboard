@@ -1,24 +1,28 @@
 # Swedish Club Management Dashboard
 
-This project serves as a key tool for club executives, improving our ability to manage tasks related to the University of Auckland Swedish Club. 
+The Swedish Club Management Dashboard is a frontend web application designed for club executives at the University of Auckland Swedish Club,
+helping them efficiently organise, view, and manage tasks. The system emphasises practical usability, allowing executives to coordinate activities effectively.
 
-## Project Overview
-
-The Swedish Club Management Dashboard is a frontend web application tailored for club executives, enabling us to efficiently organize, view, and manage their tasks. This project emphasizes practical usability, allowing execs to coordinate our activities and stay engaged with our responsibilities. 
 
 ## Features
 
-- **Task Management**: Easily create, view, and complete tasks.
-- **Overdue Task Highlighting**: Instantly spot overdue and upcoming tasks.  
-  ![Dashboard](src/assets/img/Dashboard.png)
 
-- **User-friendly Interface**: A clean, intuitive layout that reflects Swedish cultural aesthetics.
-  ![All Tasks Page](src/assets/img/AllTasks.png)
-
-- **Custom API**: A fully custom RESTful API enabling efficient interaction with task data.  
-  ![Task Creation Screen](src/assets/img/TaskCreation.png)
+<h3>Dashboard Display</h3> 
+<p>Highlights upcoming and overdue tasks, allowing executives to take necessary action and quickly mark them as complete when done.</p> 
+<img src="src/assets/img/Dashboard.png" alt="Dashboard" ">
 
 
+
+<h3>User-friendly Interface</h3>
+<p>A clean, intuitive layout that doesn't distract from the information presented, with aesthetics inspired by Swedish culture.</p>
+  <img src="src/assets/img/AllTasks.png" alt="All Tasks Page" ">
+
+
+
+<h3>Task Management</h3>
+<p>A fully <a href="https://github.com/samrichell-smith/Swedish-Club-Management-API" target="_blank">custom RESTful API</a> allows executives to easily
+  <strong>create,</strong> <strong>view,</strong> and <strong>complete</strong> tasks directly from the dashboard.</p>
+<img src="src/assets/img/TaskCreation.png" alt="Task Creation Screen" ">
 
 ## Technologies Used
 
@@ -28,6 +32,4 @@ The Swedish Club Management Dashboard is a frontend web application tailored for
 
 ## Usage
 
-We use this dashboard regularly to broadly organise and structure what needs doing and when. We had issues with this before, as we mainly kept track of what needs doing through conversation and word of mouth, so I created this to serve as a definitve source that is easily accessible to execs.
-
-
+The club executives use this dashboard regularly to organise and structure what needs doing and when. This was an issue before, as they mainly kept track of what needs doing through conversation and word of mouth, so I created this tool to serve as a definitive source that is easily accessible.
