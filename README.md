@@ -22,7 +22,7 @@ The Swedish Club Management Dashboard is a frontend web application tailored for
 
 ## Technologies Used
 
-- **Frontend**: HTML, CSS, TypeScript
+- **Frontend**: React, HTML, CSS, TypeScript
 - **Backend**: <a href="https://github.com/samrichell-smith/Swedish-Club-Management-API" target="_blank">Custom Go API</a>
 - **Hosting**: Backend hosted on Render.com
 
