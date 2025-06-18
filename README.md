@@ -1,4 +1,4 @@
-# Swedish Club Management Dashboard
+# Swedish Club Management Dashboard  
 
 The Swedish Club Management Dashboard is a frontend web application designed for club executives at the University of Auckland Swedish Club,
 helping them efficiently organise, view, and manage tasks. The system emphasises practical usability, allowing executives to coordinate activities effectively.
