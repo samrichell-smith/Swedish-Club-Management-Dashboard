@@ -27,9 +27,14 @@ helping them efficiently organise, view, and manage tasks. The system emphasises
 ## Technologies Used
 
 - **Frontend**: React, HTML, CSS, TypeScript
-- **Backend**: <a href="https://github.com/samrichell-smith/Swedish-Club-Management-API" target="_blank">Custom Go API</a>
-- **Hosting**: Backend hosted on Render.com
+- **Backend**: <a href="https://github.com/samrichell-smith/Swedish-Club-Management-API" target="_blank">REST API written in Go, using the Go standard library</a>
+
 
 ## Usage
 
 The club executives use this dashboard regularly to organise and structure what needs doing and when. This was an issue before, as they mainly kept track of what needs doing through conversation and word of mouth, so I created this tool to serve as a definitive source that is easily accessible.
+
+## Deployment
+
+- The frontend is served via a Docker container with Nginx, allowing it to be hosted anywhere without additional setup.
+- Backend API is currently deployed and hosted on Render.com
